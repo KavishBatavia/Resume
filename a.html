@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Resume - Kavish Batavia</title>
+  <style>
+    body {
+      background: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- Load React and ReactDOM from CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Your React code -->
+  <script type="text/javascript">
+    const { useState, useEffect } = React;
+
+    const Resume = () => {
+      const skills = [
+        'C/C++',
+        'Python',
+        'Embedded Systems',
+        'Java',
+        'Microcontrollers (ARM, AVR)',
+       
+        'Git',
+       
+      ];
+
+      return React.createElement('div', {
+        style: {
+          maxWidth: '800px',
+          margin: '40px auto',
+          padding: '30px',
+          background: '#fff',
+          borderRadius: '8px',
+          boxShadow: '0 0 12px rgba(0,0,0,0.1)',
+          fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+          color: '#222'
+        }
+      },
+        React.createElement('header', { style: { marginBottom: '25px' } },
+          React.createElement('h1', { style: { color: '#0b3d91', marginBottom: '5px' } }, 'Kavish Batavia'),
+          React.createElement('p', null, 'Computer Engineer | Embedded Systems | Software Developer'),
+          React.createElement('p', null, 'Email: kavish@gmail.com | LinkedIn: linkedin.com/in')
+        ),
+
+        React.createElement('section', { style: { marginBottom: '25px' } },
+          React.createElement('h2', { style: { color: '#0b3d91' } }, 'About Me'),
+          React.createElement('p', null,
+            'Computer Engineering graduate with strong foundation in embedded systems, software development, and hardware design. ' +
+            'Passionate about building innovative solutions and improving system performance.'
+          )
+        ),
+
+        React.createElement('section', { style: { marginBottom: '25px' } },
+          React.createElement('h2', { style: { color: '#0b3d91' } }, 'Work Experience'),
+
+          React.createElement('div', { style: { marginBottom: '15px' } },
+            React.createElement('h3', null, 'Embedded Systems Engineer - Tech Solutions Inc.'),
+            React.createElement('p', null, React.createElement('em', null, 'Jun 2025 - Present')),
+            React.createElement('ul', null,
+              React.createElement('li', null, 'Developed firmware for IoT devices using C and RTOS.'),
+              React.createElement('li', null, 'Collaborated with hardware team to optimize PCB design and testing.'),
+              React.createElement('li', null, 'Implemented UART and SPI communication protocols for sensor integration.')
+            )
+          ),
+
+          React.createElement('div', null,
+            React.createElement('h3', null, 'Software Engineering Intern - Innovatech Labs'),
+           
+            React.createElement('ul', null,
+              React.createElement('li', null, 'Assisted in developing backend microservices using Python and Flask.'),
+              React.createElement('li', null, 'Automated testing pipelines to improve deployment efficiency.')
+            )
+          )
+        ),
+
+        React.createElement('section', { style: { marginBottom: '25px' } },
+          React.createElement('h2', { style: { color: '#0b3d91' } }, 'Projects'),
+
+          React.createElement('div', { style: { marginBottom: '15px' } },
+            React.createElement('h3', null, 'Smart Home Automation System'),
+            React.createElement('p', null,
+              'Designed and implemented an embedded system to control home appliances remotely using Bluetooth and mobile app interface.'
+            )
+          ),
+
+          React.createElement('div', null,
+            React.createElement('h3', null, 'Traffic Light Control System'),
+            React.createElement('p', null,
+              'Developed a microcontroller-based traffic light controller with sensor inputs to optimize traffic flow.'
+            )
+          )
+        ),
+
+        React.createElement('section', { style: { marginBottom: '25px' } },
+          React.createElement('h2', { style: { color: '#0b3d91' } }, 'Education'),
+          React.createElement('p', null,
+            React.createElement('strong', null, 'Bachelor of Science in Computer Engineering'),
+            ' - State University (2019 - 2023)'
+          ),
+          React.createElement('p', null, 'Relevant Coursework: Embedded Systems, Digital Logic Design, Data Structures, Operating Systems')
+        ),
+
+        React.createElement('section', { style: { marginBottom: '25px' } },
+          React.createElement('h2', { style: { color: '#0b3d91' } }, 'Technical Skills'),
+          React.createElement('ul', { style: { listStyleType: 'disc', paddingLeft: '20px' } },
+            skills.map(skill => React.createElement('li', { key: skill }, skill))
+          )
+        ),
+
+        React.createElement('footer', { style: { textAlign: 'center', color: '#888' } },
+          React.createElement('p', null, '© 2025 Jane Smith. All rights reserved.')
+        )
+      );
+    };
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(React.createElement(Resume));
+  </script>
+</body>
+</html>
